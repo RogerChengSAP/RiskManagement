@@ -23,6 +23,12 @@
     Release:
        cloudFoundryDeploy: true
        tmsUpload: false
+       cfTargets:
+         - org: '540fbbb1trial'
+           space: 'dev'
+           apiEndpoint: 'https://api.cf.us10.hana.ondemand.com'
+           appName: 'risk-management-dev'
+           credentialsId: 'cfdeploy'
     steps:
       cloudFoundryDeploy:
         cloudFoundry: 
@@ -30,7 +36,7 @@
           org: "540fbbb1trial"
           space: "dev"
           credentialsId: "cfdeploy"
-          appName: ""
+          appName: "risk-management-dev"
         mtaDeployParameters: "-f --version-rule ALL"
     artifactPrepareVersion:
         versioningType: "cloud_noTag"
